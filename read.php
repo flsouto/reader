@@ -37,3 +37,5 @@ for($i=$last_pos+1;$i<=$len;$i++){
     }
     
 }
+
+exec("git add $folder/pos && git commit -m 'Position update' && git push origin master > /dev/null 2>&1 &");
