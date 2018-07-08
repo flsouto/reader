@@ -29,6 +29,8 @@ for($i=$last_pos+1;$i<=$len;$i++){
     
     if($char=='.' && mb_strlen($str)>=100){
         $str = preg_replace("/\n+/","\n",$str);
+        $str = preg_replace("/\t/"," ",$str);
+        $str = preg_replace("/\s+/"," ",$str);
         $str = trim($str);
         $str = wordwrap($str,60);
         echo $str.PHP_EOL;
